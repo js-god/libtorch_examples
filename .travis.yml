@@ -42,6 +42,11 @@ matrix:
 
 before_install:
   - sudo apt-get update -qq
+  - wget https://download.pytorch.org/libtorch/cpu/libtorch-shared-with-deps-latest.zip
+  - unzip libtorch-shared-with-deps-latest.zip && cd libtorch
+  - sudo cp -R * /usr/local/
+  - cd ..
+
 
 # Build steps
 script:
