@@ -1,5 +1,4 @@
 #include "mnist.h"
-#include "model.h"
 
 #include <torch/torch.h>
 
@@ -109,4 +108,6 @@ auto main(int argc, const char* argv[]) -> int {
 			epoch, options, model, device, *train_loader, optimizer, dataset_size.value());
 		test(model, device, *test_loader, dataset_size.value());
 	}
+
+    return 0;
 }
